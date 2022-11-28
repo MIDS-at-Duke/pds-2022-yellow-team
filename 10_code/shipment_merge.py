@@ -57,6 +57,8 @@ wa_df_pop["CTYNAME"] = wa_df_pop["CTYNAME"].str.replace(" County", "")
 wa_df_pop["CTYNAME"] = wa_df_pop["CTYNAME"].str.upper()
 # fix unmatching county names with population data
 wa_df_pop.loc[wa_df_pop["CTYNAME"] == "ST. LAWRENCE", "CTYNAME"] = "SAINT LAWRENCE"
+# merge population with FIPS
+# merge population and shipment on FIPS
 
 # merge shipment and population data
 fl_ship_pop = fl_ship_fips.merge(
